@@ -1,6 +1,6 @@
 var canvas = document.querySelector('canvas');
-var num_rows = Math.round(canvas.height / 20);
-var num_cols = Math.round(canvas.width / 20);
+var num_rows = Math.round(canvas.height / 10);
+var num_cols = Math.round(canvas.width / 10);
 
 var ctx = canvas.getContext('2d');
 var keepGoing = true;
@@ -102,21 +102,21 @@ function printGrid(){
         for(var j = 0; j < num_cols; j++){
             if(grid[i][j] == 1){
                 ctx.fillStyle = "#FF00F0";
-                ctx.fillRect(x, y, 20, 20);
+                ctx.fillRect(x, y, 10, 10);
                 ctx.beginPath();
-                ctx.rect(x,y,20,20);
+                ctx.rect(x,y,10,10);
                 ctx.stroke();
             }
             else{
                 ctx.fillStyle = "#FFFFFF";
-                ctx.fillRect(x, y, 20, 20);
+                ctx.fillRect(x, y, 10, 10);
                 ctx.beginPath();
-                ctx.rect(x,y,20,20);
+                ctx.rect(x,y,10,10);
                 ctx.stroke();
             }
-            x += 20;
+            x += 10;
         }
-        y += 20;
+        y += 10;
         x = 0;
     }
 }
