@@ -48,8 +48,13 @@ btn4.onmousedown = function(){
 
 var btn5 = document.getElementById('rando');
 btn5.onmousedown = function(){
+    keepGoing = false;
+    ClearGrid();
     randomGrid();
     printGrid();
+    gen = 0;
+    var element = document.getElementById("generations");
+    element.innerHTML = gen;
 }
 
 
